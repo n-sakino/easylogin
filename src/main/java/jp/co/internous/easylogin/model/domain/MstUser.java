@@ -1,4 +1,4 @@
-package jp.co.internous.easylogin.model.dmain;
+package jp.co.internous.easylogin.model.domain;
 
 public class MstUser {
 	private int id;

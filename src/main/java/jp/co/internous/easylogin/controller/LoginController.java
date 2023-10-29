@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import jp.co.internous.easylogin.model.dmain.MstUser;
+import jp.co.internous.easylogin.model.domain.MstUser;
 import jp.co.internous.easylogin.model.mapper.MstUserMapper;
 
 @Controller
@@ -22,7 +22,7 @@ public String index() {
  }
 @GetMapping("login")
 	public String login(String userName,String password,Model model) {
-	MstUser user=userMapper.findByNameAndPassword(userName,password);
+	MstUser user=userMapper.findByUserNameAndPassword(userName,password);
 	if(user==null) {
 		model.addAttribute("message","ゲストさん、ようこそ!");
 	}else {
